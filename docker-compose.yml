@@ -1,0 +1,27 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: smart-meter-dashboard
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8080}:80"
+
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: smart-meter-dashboard-dev
+    ports:
+      - "${DEV_PORT:-5174}:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    profiles:
+      - dev
+
