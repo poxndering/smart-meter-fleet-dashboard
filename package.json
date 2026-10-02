@@ -1,0 +1,63 @@
+{
+  "name": "smart-meter-fleet-dashboard",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "lint": "run-s \"lint:*\"",
+    "lint:oxlint": "oxlint . --fix",
+    "lint:eslint": "eslint . --fix --cache"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "chart.js": "^4.5.1",
+    "lucide-vue-next": "^1.0.0",
+    "mqtt": "^5.16.0",
+    "pinia": "^4.0.3",
+    "tailwindcss": "^4.3.3",
+    "vue": "rc",
+    "vue-chartjs": "^5.3.4",
+    "vue-router": "^5.3.1",
+    "vue3-toastify": "^0.2.9"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vitejs/plugin-vue-jsx": "^5.1.6",
+    "@vitest/eslint-plugin": "^1.6.27",
+    "@vue/test-utils": "^2.5.0",
+    "eslint": "^10.10.0",
+    "eslint-plugin-oxlint": "~1.82.0",
+    "eslint-plugin-vue": "~10.11.0",
+    "globals": "^17.12.0",
+    "jsdom": "^30.0.1",
+    "npm-run-all2": "^9.0.3",
+    "oxlint": "~1.82.0",
+    "vite": "^8.2.2",
+    "vite-plugin-vue-devtools": "^8.2.1",
+    "vitest": "^4.1.11",
+    "vue-eslint-parser": "^10.4.1"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.12.0"
+  },
+  "overrides": {
+    "vue": "rc",
+    "@vue/compiler-core": "rc",
+    "@vue/compiler-dom": "rc",
+    "@vue/compiler-sfc": "rc",
+    "@vue/compiler-ssr": "rc",
+    "@vue/compiler-vapor": "rc",
+    "@vue/reactivity": "rc",
+    "@vue/runtime-core": "rc",
+    "@vue/runtime-dom": "rc",
+    "@vue/runtime-vapor": "rc",
+    "@vue/server-renderer": "rc",
+    "@vue/shared": "rc",
+    "@vue/compat": "rc"
+  }
+}
